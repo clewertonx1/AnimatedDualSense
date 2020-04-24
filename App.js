@@ -10,15 +10,14 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={{alignItems: 'center',}}>
-
-        <Image style={{width: 300, height: 300, resizeMode: "cover" ,position: 'absolute', zIndex: 3}} tintColor={'rgba(255,255,0,0.5)'} source = {require('./src/images/DualSenseRight.png')} />
+      <View style={{justifyContent: 'center', alignItems: 'center',}}>
+        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(255,255,0,0.5)'} source = {require('./src/images/DualSenseRight.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 2}}  source = {require('./src/images/DualSenseRight.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(255,0,255,0.5)'} source = {require('./src/images/DualSenseLeft.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/DualSenseLeft.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(0,255,255,0.5)'} source = {require('./src/images/DualSenseCenter.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/DualSenseCenter.png')} />
-        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 1}} source = {require('./src/images/DualSense.jpg')} />
+        <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/background.png')} />
       </View>
     </View>
   );
