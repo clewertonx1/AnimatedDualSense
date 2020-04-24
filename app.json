@@ -1,0 +1,17 @@
+{
+  "name": "DualSenseAnimated",
+  "displayName": "DualSenseAnimated",
+  "expo": {
+    "name": "DualSenseAnimated",
+    "slug": "DualSenseAnimated",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
