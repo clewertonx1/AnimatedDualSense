@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useEffect, useRef} from 'react'
 import { Platform, StyleSheet, Text, View, Image, TouchableOpacity, Animated   } from 'react-native';
-
+import Button from './src/components/button'
 
 export default function App() {
 
@@ -44,28 +44,7 @@ export default function App() {
     <View style={styles.container}>
       <Animated.View style={{justifyContent: 'center', alignItems: 'center',}}>
 
-        <View style={[styles.buttonView, {right: 130}]}>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.button, styles.buttonLeft ]}>
-            <Text style={styles.buttonText}>+</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, top: 23, backgroundColor: '#ed349c'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, bottom: 23, backgroundColor: '#ffd91c'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 23, backgroundColor: '#ff1e1e'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 23, backgroundColor: '#00ffff'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, top: 14, backgroundColor: '#9b9b9b'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, bottom: 14, backgroundColor: '#FAFAFA'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, bottom: 14, backgroundColor: '#8b1eff'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, top: 14, backgroundColor: '#00ff11'}]}>
-          </TouchableOpacity> 
-        </View>
-        
+        <Button style={{zIndex: 7}} right={130}></Button>
 
         
         
