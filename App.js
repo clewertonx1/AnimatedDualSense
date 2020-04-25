@@ -5,6 +5,12 @@ import Button from './src/components/button'
 
 export default function App() {
 
+
+  const teste = () => {
+    console.log("teste")
+  }
+
+  const testeRef = useRef(teste())
   
   const animatedValueTop = new Animated.Value(0)
   const animatedValueTopRef = useRef(animatedValueTop)
@@ -40,7 +46,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={{justifyContent: 'center', alignItems: 'center',}}>
+      
 
         
         
@@ -53,9 +59,9 @@ export default function App() {
         <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 1}} tintColor={'rgba(0,255,255,0.5)'} source = {require('./src/images/DualSenseCenter.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/DualSenseCenter.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/background.png')} />
-      </View>
+      
 
-      <Button right={130}></Button>
+      <Button teste={teste} right={130}></Button>
       <Button right={-130}></Button>
       <Button bottom={90}></Button>
     </View>
@@ -68,7 +74,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#eaf9ff',
     
   },
   
