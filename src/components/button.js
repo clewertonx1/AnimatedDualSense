@@ -15,29 +15,29 @@ export default function Button(params) {
  // #00ff11 VERDE
 
   return (
-        <View style={[styles.buttonView, {right: params.right}]}>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.button, styles.buttonLeft ]}>
-            <Text style={styles.buttonText}>+</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, top: 23, backgroundColor: '#ed349c'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, bottom: 23, backgroundColor: '#ffd91c'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 23, backgroundColor: '#ff1e1e'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 23, backgroundColor: '#00ffff'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, top: 14, backgroundColor: '#9b9b9b'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, bottom: 14, backgroundColor: '#FAFAFA'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, bottom: 14, backgroundColor: '#8b1eff'}]}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, top: 14, backgroundColor: '#00ff11'}]}>
-          </TouchableOpacity> 
-        </View>
-    
-     
+   
+    <View style={[styles.buttonView, { right: params.right, bottom: params.bottom}]}>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.button, styles.buttonLeft ]}>
+        <Text style={styles.buttonText}>+</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, top: 23, backgroundColor: '#ed349c'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, bottom: 23, backgroundColor: '#ffd91c'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 23, backgroundColor: '#ff1e1e'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 23, backgroundColor: '#00ffff'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, top: 14, backgroundColor: '#9b9b9b'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, left: 13, bottom: 14, backgroundColor: '#FAFAFA'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, bottom: 14, backgroundColor: '#8b1eff'}]}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => toggleMenu()} style={[styles.ColorButton, {zIndex: 10, right: 13, top: 14, backgroundColor: '#00ff11'}]}>
+        </TouchableOpacity> 
+    </View>
+        
     
   );
 }
@@ -45,7 +45,7 @@ export default function Button(params) {
 const styles = StyleSheet.create({
   container: {
     
-    flex: 1,
+    
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
@@ -63,10 +63,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonView:{
-    zIndex: 7,
     justifyContent: 'center',
     alignItems: 'center',
-    
+    position: 'relative',
   },
   buttonLeft:{
     backgroundColor: 'rgba(255, 0, 149,0.8)',

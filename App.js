@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useState, useEffect, useRef} from 'react'
-import { Platform, StyleSheet, Text, View, Image, TouchableOpacity, Animated   } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TouchableOpacity, Animated, } from 'react-native';
 import Button from './src/components/button'
 
 export default function App() {
@@ -27,9 +27,7 @@ export default function App() {
     outputRange: [0, 30],
   })
   
-    
-  
-    
+
   
  // #ed349c ROSA
  // #FFF09D AMARELO
@@ -42,23 +40,24 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Animated.View style={{justifyContent: 'center', alignItems: 'center',}}>
-
-        <Button style={{zIndex: 7}} right={130}></Button>
+      <View style={{justifyContent: 'center', alignItems: 'center',}}>
 
         
         
+      
         
-        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(255,255,0,0.5)'} source = {require('./src/images/DualSenseRight.png')} />
-        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 2}}  source = {require('./src/images/DualSenseRight.png')} />
-        <TouchableOpacity style={[styles.button, styles.buttonRight]}><Text style={styles.buttonText}>+</Text></TouchableOpacity>
-        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(255,0,255,0.5)'} source = {require('./src/images/DualSenseLeft.png')} />
+        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 1}} tintColor={'rgba(255,255,0,0.5)'} source = {require('./src/images/DualSenseRight.png')} />
+        <Image style={{width: 300, height: 300, position: 'absolute'}}  source = {require('./src/images/DualSenseRight.png')} />
+        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 1}} tintColor={'rgba(255,0,255,0.5)'} source = {require('./src/images/DualSenseLeft.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/DualSenseLeft.png')} />
-        <TouchableOpacity style={[styles.button, styles.buttonCenter]}><Text style={styles.buttonText}>+</Text></TouchableOpacity>
-        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 3}} tintColor={'rgba(0,255,255,0.5)'} source = {require('./src/images/DualSenseCenter.png')} />
+        <Image style={{width: 300, height: 300, position: 'absolute', zIndex: 1}} tintColor={'rgba(0,255,255,0.5)'} source = {require('./src/images/DualSenseCenter.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/DualSenseCenter.png')} />
         <Image style={{width: 300, height: 300, position: 'absolute'}} source = {require('./src/images/background.png')} />
-      </Animated.View>
+      </View>
+
+      <Button right={130}></Button>
+      <Button right={-130}></Button>
+      <Button bottom={90}></Button>
     </View>
   );
 }
@@ -72,48 +71,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     
   },
-  button:{
-    borderWidth: 15,
-    borderColor: 'rgba(255,255,255, 1)',
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    position: 'absolute', 
-    zIndex: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  buttonView:{
-    zIndex: 7,
-    justifyContent: 'center',
-    alignItems: 'center',
-    
-  },
-  buttonLeft:{
-    backgroundColor: 'rgba(255, 0, 149,0.8)',
-    
-  },
-  ColorButton:{
-      backgroundColor: 'red',
-      borderColor: 'rgba(255,255,255, 0.5)',
-      width: 15,
-      height: 15,
-      borderRadius: 15,
-      position: 'absolute', 
-      zIndex: 5,
-      justifyContent: 'center',
-      alignItems: 'center',
-  },
-  buttonRight:{
-    left: 105,
-    backgroundColor: 'rgba(255, 0, 149,0.8)'
-  },
-  buttonCenter:{
-    bottom: 60,
-    backgroundColor: 'rgba(255, 0, 149,0.8)'
-  },
-  buttonText:{
-    color: 'white'
-
-  }
+  
 });
